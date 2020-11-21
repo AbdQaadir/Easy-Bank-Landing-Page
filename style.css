@@ -1,0 +1,306 @@
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#section1 .wrapper, #section2 .wrapper, footer .wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-header {
+  color: #2d314d;
+  font-size: 45px;
+  font-weight: 300;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  margin-bottom: 0;
+  z-index: 999999999999;
+}
+
+header nav {
+  margin: 0 auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  padding: 20px 14px;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  border-bottom: 3px solid linear-gradient(90deg, rgba(49, 211, 92, 0.65) 8%, rgba(43, 183, 218, 0.65) 81%);
+}
+
+.request-btn {
+  padding: 15px 34px;
+  color: #ffffff;
+  font-size: 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(49, 211, 92, 0.65)), color-stop(81%, rgba(43, 183, 218, 0.65)));
+  background: linear-gradient(90deg, rgba(49, 211, 92, 0.65) 8%, rgba(43, 183, 218, 0.65) 81%);
+  cursor: pointer;
+}
+
+main {
+  background: #fafafa;
+  margin-top: 0 !important;
+  height: 80vh;
+}
+
+main .wrapper {
+  margin-left: auto;
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+main .wrapper .hero-col {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 20px 40px;
+}
+
+main .wrapper .hero-col h1 {
+  font-size: 60px;
+  font-weight: 300;
+  color: #2d314d;
+  margin: 14px 0;
+}
+
+main .wrapper .hero-col p {
+  color: #9698a6;
+  line-height: 1.8;
+}
+
+main .wrapper .hero-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background: url("./images/bg-intro-desktop.svg");
+  background-size: cover cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+#section1 {
+  padding: 100px 10px;
+  background: #f3f4f6;
+}
+
+#section1 p {
+  color: #9698a6;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+#section1 .wrapper.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+#section1 .wrapper.flex .section-item {
+  width: 280px;
+}
+
+#section1 .wrapper.flex .section-item h3 {
+  font-size: 23px;
+  color: #2d314d;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+#section1 .wrapper.flex .section-item p {
+  font-size: 15px;
+}
+
+#section2 {
+  padding: 100px 10px;
+  background: #ffffff;
+}
+
+#section2 p {
+  color: #9698a6;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+#section2 .wrapper.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+#section2 .wrapper.flex .section-item {
+  width: 280px;
+  -webkit-box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.085);
+          box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.085);
+}
+
+#section2 .wrapper.flex .section-item .img-wrapper {
+  width: 100%;
+}
+
+#section2 .wrapper.flex .section-item .img-wrapper img {
+  width: 100%;
+}
+
+#section2 .wrapper.flex .section-item .text-wrapper {
+  width: 100%;
+  padding: 30px 18px;
+}
+
+#section2 .wrapper.flex .section-item .text-wrapper cite {
+  font-size: 10px;
+  color: #9698a6;
+}
+
+#section2 .wrapper.flex .section-item .text-wrapper a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #2d314d;
+  font-weight: 400;
+  margin: 10px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#section2 .wrapper.flex .section-item .text-wrapper a:hover {
+  color: #31d35c;
+}
+
+#section2 .wrapper.flex .section-item .text-wrapper p {
+  font-size: 14px;
+}
+
+footer {
+  background: #2d314d;
+  padding: 50px 0;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .wrapper .footer-1 {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .wrapper .footer-1 .footer-sub.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .wrapper .footer-1 .footer-sub.flex .social-links svg {
+  color: red;
+}
+
+footer .wrapper .footer-1 .footer-sub ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer .wrapper .footer-1 .footer-sub ul li {
+  margin: 20px 0;
+}
+
+footer .wrapper .footer-1 .footer-sub ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+footer .wrapper .footer-1 .footer-sub ul li a:hover {
+  color: #31d35c;
+}
+
+footer .wrapper .footer-2 {
+  text-align: center;
+}
+
+footer .wrapper .footer-2 p {
+  margin-top: 30px;
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
