@@ -114,6 +114,10 @@ header {
   border: none;
   background: $gradient;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 main {
