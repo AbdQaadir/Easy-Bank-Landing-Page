@@ -111,7 +111,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-  border-bottom: 3px solid linear-gradient(to right, #31d35c, #2bb7da);
+  border-bottom: 3px solid #31d35c;
 }
 
 .request-btn {
