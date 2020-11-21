@@ -6,11 +6,7 @@ $grayish-blue: #9698a6;
 $light-grayish-blue: #f3f4f6;
 $very-light-gray: #fafafa;
 $white: #ffffff;
-$gradient: linear-gradient(
-  90deg,
-  rgba(49, 211, 92, 0.65) 8%,
-  rgba(43, 183, 218, 0.65) 81%
-);
+$gradient: linear-gradient(to right, $lime-green, $bright-cyan);
 
 // FONT WEIGHTS
 $light: 300;
@@ -32,6 +28,10 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+
+#mobile-nav {
+  display: none;
+}
 .section-header {
   color: $dark-blue;
   font-size: 45px;
@@ -43,6 +43,9 @@ header {
   background: $white;
   margin-bottom: 0;
   z-index: 999999999999;
+  .toggler {
+    cursor: pointer;
+  }
   nav {
     margin: 0 auto;
     width: 80%;
@@ -82,20 +85,19 @@ header {
 main {
   background: $very-light-gray;
   margin-top: 0 !important;
-  height: 80vh;
-
+  min-height: 80vh;
   .wrapper {
     margin-left: auto;
     width: 90%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
     .hero-col {
       flex-basis: 45%;
       align-self: center;
       padding: 20px 40px;
-
       h1 {
         font-size: 60px;
         font-weight: $light;
@@ -138,6 +140,7 @@ main {
 
       .section-item {
         width: 280px;
+        margin-bottom: 30px;
         h3 {
           font-size: 23px;
           color: $dark-blue;
@@ -171,6 +174,7 @@ main {
 
       .section-item {
         width: 280px;
+        margin-bottom: 30px;
         box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.085);
         .img-wrapper {
           width: 100%;
@@ -215,18 +219,20 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     .footer-1 {
-      flex-basis: 60%;
+      flex-basis: 70%;
+      margin-bottom: 30px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       .footer-sub.flex {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        text-align: center;
         .social-links {
-          svg {
-            color: red;
+          img {
+            padding: 10px;
           }
         }
       }
@@ -258,22 +264,98 @@ footer {
     }
   }
 }
-// @media screen and (max-width: 375px) {
-//   .wrapper {
-//     width: 94%;
-//     margin: 0 auto;
-//   }
-// }
 
-// @media screen and (max-width: 700px) {
-//   .wrapper {
-//     width: 90%;
-//     margin: 0 auto;
-//   }
-// }
-// @media screen and (min-width: 800px) and (max-width: 1440px) {
-//   .wrapper {
-//     width: 40%;
-//     margin: 0 auto;
-//   }
-// }
+@media screen and (max-width: 699px) {
+  .section-header {
+    font-size: 24px !important;
+  }
+  %wrapper-shared {
+    width: 93%;
+    text-align: center;
+  }
+  .wrapper {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .hero-col {
+    padding: 20px 10px !important;
+    text-align: center;
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+  .footer-1 {
+    .footer-sub {
+      width: 100%;
+    }
+    .footer-sub.flex {
+      flex-basis: 100% !important;
+      img {
+        margin: 20px auto;
+      }
+    }
+    flex-basis: 100% !important;
+  }
+  .footer-2 {
+    flex-basis: 100% !important;
+  }
+}
+
+@media screen and (max-width: 700) {
+  .section-header {
+    font-size: 26px !important;
+  }
+  %wrapper-shared {
+    width: 90%;
+  }
+  .hero-col {
+    flex-basis: 100% !important;
+    order: 2;
+    padding: 20px 10px;
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-header {
+    font-size: 20px;
+  }
+  %wrapper-shared {
+    width: 80%;
+  }
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: flex;
+  }
+  .hero-col {
+    flex-basis: 100% !important;
+    order: 2;
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+  .hero-img {
+    margin-top: -20px;
+    order: 1 !important;
+    flex-basis: 100% !important;
+    img {
+      width: 80%;
+    }
+  }
+}
+@media screen and (min-width: 901px) {
+  .wrapper {
+    width: 40%;
+    margin: 0 auto;
+  }
+  #desktop-nav {
+    display: flex;
+  }
+  .footer-1 {
+    flex-basis: 70%;
+  }
+}
